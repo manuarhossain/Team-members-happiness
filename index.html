@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW HAPPY ARE YOUR TEAM MEMBER?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bar {
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            display: inline-block;
+        }
+        .bar.red { background-color: red; }
+        .bar.blue { background-color: blue; }
+        .bar.grey { background-color: grey; }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #results, #results * {
+                visibility: visible;
+            }
+            #results {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HOW HAPPY ARE YOUR TEAM MEMBER?</h1>
+    <p>For each statement, click the button in the column that best describes you. Please answer questions as you actually are (rather than how you think you should be), and don't worry if some questions seem to score in the "wrong direction." When you are finished, please click the "Submit" button at the bottom of the test.</p>
+    <form id="survey-form">
+        <ul>
+            <li>
+                <h4>1. They contribute nothing to team meetings.</h4>
+                <label><input type="radio" name="question1" value="5"> Never</label>
+                <label><input type="radio" name="question1" value="4"> Rarely</label>
+                <label><input type="radio" name="question1" value="3"> Sometimes</label>
+                <label><input type="radio" name="question1" value="2"> Often</label>
+                <label><input type="radio" name="question1" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>2. They approach me unprompted to share their opinions.</h4>
+                <label><input type="radio" name="question2" value="1"> Never</label>
+                <label><input type="radio" name="question2" value="2"> Rarely</label>
+                <label><input type="radio" name="question2" value="3"> Sometimes</label>
+                <label><input type="radio" name="question2" value="4"> Often</label>
+                <label><input type="radio" name="question2" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>3. They don't put their hand up for training to develop a new skill.</h4>
+                <label><input type="radio" name="question3" value="5"> Never</label>
+                <label><input type="radio" name="question3" value="4"> Rarely</label>
+                <label><input type="radio" name="question3" value="3"> Sometimes</label>
+                <label><input type="radio" name="question3" value="2"> Often</label>
+                <label><input type="radio" name="question3" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>4. They don't smile.</h4>
+                <label><input type="radio" name="question4" value="5"> Never</label>
+                <label><input type="radio" name="question4" value="4"> Rarely</label>
+                <label><input type="radio" name="question4" value="3"> Sometimes</label>
+                <label><input type="radio" name="question4" value="2"> Often</label>
+                <label><input type="radio" name="question4" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>5. Their work matches the organization's values and mission.</h4>
+                <label><input type="radio" name="question5" value="1"> Never</label>
+                <label><input type="radio" name="question5" value="2"> Rarely</label>
+                <label><input type="radio" name="question5" value="3"> Sometimes</label>
+                <label><input type="radio" name="question5" value="4"> Often</label>
+                <label><input type="radio" name="question5" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>6. They go beyond the responsibilities in their job description.</h4>
+                <label><input type="radio" name="question6" value="1"> Never</label>
+                <label><input type="radio" name="question6" value="2"> Rarely</label>
+                <label><input type="radio" name="question6" value="3"> Sometimes</label>
+                <label><input type="radio" name="question6" value="4"> Often</label>
+                <label><input type="radio" name="question6" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>7. I celebrate their good work.</h4>
+                <label><input type="radio" name="question7" value="1"> Never</label>
+                <label><input type="radio" name="question7" value="2"> Rarely</label>
+                <label><input type="radio" name="question7" value="3"> Sometimes</label>
+                <label><input type="radio" name="question7" value="4"> Often</label>
+                <label><input type="radio" name="question7" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>8. They attend team social events..</h4>
+                <label><input type="radio" name="question8" value="1"> Never</label>
+                <label><input type="radio" name="question8" value="2"> Rarely</label>
+                <label><input type="radio" name="question8" value="3"> Sometimes</label>
+                <label><input type="radio" name="question8" value="4"> Often</label>
+                <label><input type="radio" name="question8" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>9. They show no interest in career advancement.</h4>
+                <label><input type="radio" name="question9" value="5"> Never</label>
+                <label><input type="radio" name="question9" value="4"> Rarely</label>
+                <label><input type="radio" name="question9" value="3"> Sometimes</label>
+                <label><input type="radio" name="question9" value="2"> Often</label>
+                <label><input type="radio" name="question9" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>10. They express anger or frustration.</h4>
+                <label><input type="radio" name="question10" value="5"> Never</label>
+                <label><input type="radio" name="question10" value="4"> Rarely</label>
+                <label><input type="radio" name="question10" value="3"> Sometimes</label>
+                <label><input type="radio" name="question10" value="2"> Often</label>
+                <label><input type="radio" name="question10" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>11. They get on well with their colleagues.</h4>
+                <label><input type="radio" name="question11" value="1"> Never</label>
+                <label><input type="radio" name="question11" value="2"> Rarely</label>
+                <label><input type="radio" name="question11" value="3"> Sometimes</label>
+                <label><input type="radio" name="question11" value="4"> Often</label>
+                <label><input type="radio" name="question11" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>12. Their work is creative.</h4>
+                <label><input type="radio" name="question12" value="1"> Never</label>
+                <label><input type="radio" name="question12" value="2"> Rarely</label>
+                <label><input type="radio" name="question12" value="3"> Sometimes</label>
+                <label><input type="radio" name="question12" value="4"> Often</label>
+                <label><input type="radio" name="question12" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>13. They are late.</h4>
+                <label><input type="radio" name="question13" value="5"> Never</label>
+                <label><input type="radio" name="question13" value="4"> Rarely</label>
+                <label><input type="radio" name="question13" value="3"> Sometimes</label>
+                <label><input type="radio" name="question13" value="2"> Often</label>
+                <label><input type="radio" name="question13" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>14. Senior colleagues are accessible and will listen to them.</h4>
+                <label><input type="radio" name="question14" value="1"> Never</label>
+                <label><input type="radio" name="question14" value="2"> Rarely</label>
+                <label><input type="radio" name="question14" value="3"> Sometimes</label>
+                <label><input type="radio" name="question14" value="4"> Often</label>
+                <label><input type="radio" name="question14" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>15. They are keen to enter industry or organization awards when they come up.</h4>
+                <label><input type="radio" name="question15" value="1"> Never</label>
+                <label><input type="radio" name="question15" value="2"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="4"> Often</label>
+                <label><input type="radio" name="question15" value="5"> Always</label>
+            </li>
+            <li>
+                <h4>16. Their productivity is lower than expected.</h4>
+                <label><input type="radio" name="question15" value="5"> Never</label>
+                <label><input type="radio" name="question15" value="4"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="2"> Often</label>
+                <label><input type="radio" name="question15" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>17. They sit by themselves.</h4>
+                <label><input type="radio" name="question15" value="5"> Never</label>
+                <label><input type="radio" name="question15" value="4"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="2"> Often</label>
+                <label><input type="radio" name="question15" value="1"> Always</label>
+            </li>
+            <li>
+                <h4>18. They show little motivation.</h4>
+                <label><input type="radio" name="question15" value="5"> Never</label>
+                <label><input type="radio" name="question15" value="4"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="2"> Often</label>
+                <label><input type="radio" name="question15" value="1"> Always</label>
+            </li>
+        </ul>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
